@@ -6,19 +6,30 @@ import { SymbolView } from "expo-symbols";
 import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { Platform, StyleSheet, View, useColorScheme } from "react-native";
-
 import { useColors } from "@/hooks/useColors";
 
-// IMPORTANT: iOS 26 uses NativeTabs for native tabs with liquid glass support.
-// NativeTabs intentionally does NOT use custom design tokens — liquid glass
-// is a system-level appearance provided by iOS and cannot be overridden.
-// Custom brand colors are applied only on the ClassicTabLayout path (older iOS / Android / web).
 function NativeTabLayout() {
   return (
     <NativeTabs>
       <NativeTabs.Trigger name="index">
-        <Icon sf={{ default: "house", selected: "house.fill" }} />
-        <Label>Home</Label>
+        <Icon sf={{ default: "function", selected: "function" }} />
+        <Label>Graph</Label>
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="calculator">
+        <Icon sf={{ default: "plus.forwardslash.minus", selected: "plus.forwardslash.minus" }} />
+        <Label>Calc</Label>
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="matrix">
+        <Icon sf={{ default: "tablecells", selected: "tablecells.fill" }} />
+        <Label>Matrix</Label>
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="stats">
+        <Icon sf={{ default: "chart.bar", selected: "chart.bar.fill" }} />
+        <Label>Stats</Label>
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="solver">
+        <Icon sf={{ default: "sparkles", selected: "sparkles" }} />
+        <Label>Solver</Label>
       </NativeTabs.Trigger>
     </NativeTabs>
   );
@@ -36,11 +47,11 @@ function ClassicTabLayout() {
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.mutedForeground,
-        headerShown: true,
+        headerShown: false,
         tabBarStyle: {
           position: "absolute",
-          backgroundColor: isIOS ? "transparent" : colors.background,
-          borderTopWidth: isWeb ? 1 : 0,
+          backgroundColor: isIOS ? "transparent" : isDark ? "#111111" : "#FFFFFF",
+          borderTopWidth: StyleSheet.hairlineWidth,
           borderTopColor: colors.border,
           elevation: 0,
           ...(isWeb ? { height: 84 } : {}),
@@ -56,21 +67,70 @@ function ClassicTabLayout() {
             <View
               style={[
                 StyleSheet.absoluteFill,
-                { backgroundColor: colors.background },
+                { backgroundColor: isDark ? "#111111" : "#FFFFFF" },
               ]}
             />
           ) : null,
+        tabBarLabelStyle: { fontSize: 10, fontFamily: "Inter_500Medium", marginBottom: 2 },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Graph",
           tabBarIcon: ({ color }) =>
             isIOS ? (
-              <SymbolView name="house" tintColor={color} size={24} />
+              <SymbolView name="function" tintColor={color} size={22} />
             ) : (
-              <Feather name="home" size={22} color={color} />
+              <Feather name="trending-up" size={22} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="calculator"
+        options={{
+          title: "Calc",
+          tabBarIcon: ({ color }) =>
+            isIOS ? (
+              <SymbolView name="plus.forwardslash.minus" tintColor={color} size={22} />
+            ) : (
+              <Feather name="hash" size={22} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="matrix"
+        options={{
+          title: "Matrix",
+          tabBarIcon: ({ color }) =>
+            isIOS ? (
+              <SymbolView name="tablecells" tintColor={color} size={22} />
+            ) : (
+              <Feather name="grid" size={22} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="stats"
+        options={{
+          title: "Stats",
+          tabBarIcon: ({ color }) =>
+            isIOS ? (
+              <SymbolView name="chart.bar" tintColor={color} size={22} />
+            ) : (
+              <Feather name="bar-chart-2" size={22} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="solver"
+        options={{
+          title: "Solver",
+          tabBarIcon: ({ color }) =>
+            isIOS ? (
+              <SymbolView name="sparkles" tintColor={color} size={22} />
+            ) : (
+              <Feather name="zap" size={22} color={color} />
             ),
         }}
       />
@@ -79,7 +139,7 @@ function ClassicTabLayout() {
 }
 
 export default function TabLayout() {
-  if (isLiquidGlassAvailable()) {
+  if (Platform.OS !== "web" && isLiquidGlassAvailable()) {
     return <NativeTabLayout />;
   }
   return <ClassicTabLayout />;
