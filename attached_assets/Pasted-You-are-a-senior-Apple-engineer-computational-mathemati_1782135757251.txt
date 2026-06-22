@@ -1,0 +1,210 @@
+You are a senior Apple engineer, computational mathematician, UI/UX designer, and scientific computing expert.
+
+Build a production-grade iOS application called:
+
+OVERKILL
+The Ultimate Graphing Calculator
+
+Goal:
+Create the most advanced graphing calculator that a high-school student could realistically build and deploy to the Apple App Store.
+
+Design Philosophy:
+- Minimalist
+- Futuristic
+- Apple-level UI
+- Dark mode first
+- Extremely smooth animations
+- Mathematical elegance
+- No clutter
+- Inspired by Linear, Arc Browser, Notion Calendar, Apple Design, and Wolfram Alpha
+
+Tech Stack:
+- SwiftUI
+- Swift Charts
+- MathParser
+- Metal acceleration where appropriate
+- MVVM architecture
+- Modular codebase
+- App Store ready
+
+Core Features:
+
+SECTION 1 — GRAPHING ENGINE
+
+- Graph arbitrary functions
+- Multiple functions simultaneously
+- Automatic axis scaling
+- Pan and zoom gestures
+- Pinch-to-zoom
+- Smooth rendering
+- Infinite graph exploration
+- High-performance plotting
+
+Examples:
+
+y = x²
+y = sin(x)
+y = e^x
+y = tan(x)
+y = log(x)
+
+SECTION 2 — ADVANCED MATHEMATICS
+
+Symbolic Mathematics:
+
+- Simplification
+- Expansion
+- Factorization
+- Solve equations
+- Solve systems of equations
+- Polynomial analysis
+
+Calculus:
+
+- Derivatives
+- Higher-order derivatives
+- Definite integrals
+- Indefinite integrals
+- Numerical integration
+- Limits
+- Taylor Series
+- Maclaurin Series
+
+SECTION 3 — VISUALIZATION
+
+2D Graphing:
+
+- Cartesian plots
+- Polar plots
+- Parametric plots
+- Piecewise functions
+
+3D Graphing:
+
+- Surface plots
+- Rotatable camera
+- Lighting
+- Interactive exploration
+
+Examples:
+
+z = sin(x²+y²)
+
+z = x²+y²
+
+SECTION 4 — MATRIX ENGINE
+
+Matrix Operations:
+
+- Addition
+- Multiplication
+- Inverse
+- Determinant
+- Eigenvalues
+- Eigenvectors
+- LU decomposition
+
+SECTION 5 — STATISTICS
+
+Statistics Module:
+
+- Mean
+- Median
+- Mode
+- Standard deviation
+- Regression
+- Histograms
+- Scatter plots
+- Trend lines
+
+SECTION 6 — SCIENTIFIC TOOLKIT
+
+Include:
+
+- Unit conversions
+- Scientific constants
+- Complex numbers
+- Vector operations
+- Probability tools
+- Number theory utilities
+
+SECTION 7 — AI ASSISTANT
+
+Create an optional AI tutor panel.
+
+Features:
+
+- Explain solutions
+- Show derivation steps
+- Explain concepts
+- Detect mistakes
+- Generate practice questions
+
+Example:
+
+User enters:
+
+integral(x^2)
+
+AI explains every step.
+
+SECTION 8 — UI
+
+Home Screen:
+
+- Expression input
+- Graph area
+- Function manager
+- Tool dock
+
+Graph View:
+
+- Smooth animations
+- Modern glassmorphism
+- Interactive controls
+
+Theme:
+
+- Black
+- White
+- Electric blue accents
+
+Typography:
+
+- SF Pro
+- Clean spacing
+- Mathematical notation rendered beautifully
+
+SECTION 9 — PERFORMANCE
+
+Requirements:
+
+- Handle 100,000+ graph points
+- 60 FPS rendering
+- Fast calculations
+- Offline functionality
+
+SECTION 10 — FUTURE ROADMAP
+
+Architecture should allow:
+
+- Physics simulations
+- Differential equation solvers
+- Numerical methods
+- Machine learning visualizations
+- Computational geometry
+- Mathematical notebooks
+- Research mode
+
+Output:
+
+1. Full architecture plan
+2. Folder structure
+3. Database requirements
+4. SwiftUI screen designs
+5. Core graphing engine implementation
+6. MVP roadmap
+7. Advanced roadmap
+8. App Store deployment roadmap
+
+Build this like a startup-backed mathematical software platform, not a school project.
