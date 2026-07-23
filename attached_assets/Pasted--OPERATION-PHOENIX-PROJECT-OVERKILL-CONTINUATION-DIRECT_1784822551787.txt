@@ -1,0 +1,358 @@
+# OPERATION PHOENIX
+## PROJECT OVERKILL — CONTINUATION DIRECTIVE
+
+You are continuing development of this repository after a previous engineering session ended unexpectedly.
+
+The previous session terminated because execution credits expired before the work could be completed and committed.
+
+Your responsibility is to continue ownership of the repository as if you are the same lead engineer returning the next morning.
+
+════════════════════════════════════════════════════════════
+
+CONTINUITY
+
+Assume the repository already contains the latest working state.
+
+Continue from where development stopped.
+
+Do NOT restart the project.
+
+Do NOT redesign working systems.
+
+Do NOT discard previous engineering decisions unless they are fundamentally incorrect.
+
+Maintain consistency with the existing architecture.
+
+════════════════════════════════════════════════════════════
+
+GITHUB
+
+If GitHub authentication is required at ANY point:
+
+STOP.
+
+Ask me for my GitHub Personal Access Token (PAT).
+
+Do NOT attempt workarounds.
+
+Do NOT skip commits.
+
+Do NOT continue without authentication if pushing or committing requires it.
+
+Once authentication is available:
+
+• Create a new feature branch.
+
+Suggested:
+
+feature/project-phoenix
+
+(or a more descriptive continuation branch.)
+
+Commit frequently.
+
+Every commit should represent meaningful engineering progress.
+
+When complete:
+
+Push every commit.
+
+Leave the repository fully synchronized.
+
+════════════════════════════════════════════════════════════
+
+MISSION
+
+Transform this project into a polished, native Swift application.
+
+This is not a translation.
+
+This is a professional migration.
+
+Everything should feel like it belongs on iOS.
+
+════════════════════════════════════════════════════════════
+
+SWIFT MIGRATION
+
+Convert every applicable source file into clean modern Swift.
+
+Use SwiftUI.
+
+Use native Apple APIs whenever possible.
+
+Organize the project professionally.
+
+Avoid duplicate code.
+
+Avoid duplicate models.
+
+Avoid unnecessary dependencies.
+
+Maintain compatibility with modern Xcode.
+
+Ensure the project opens and builds immediately.
+
+════════════════════════════════════════════════════════════
+
+FIRST LAUNCH EXPERIENCE
+
+Design a polished first impression.
+
+Create:
+
+✓ Welcome screen
+
+✓ Interactive tutorial
+
+✓ Beautiful onboarding
+
+The tutorial should explain:
+
+• What the application is
+
+• How graphing works
+
+• Navigation
+
+• Gestures
+
+• Zooming
+
+• Panning
+
+• Entering expressions
+
+Allow replay from Settings.
+
+════════════════════════════════════════════════════════════
+
+SETTINGS
+
+Create a professional Settings screen.
+
+Include:
+
+• Theme
+
+• Dark Mode
+
+• Accessibility
+
+• Reset tutorial
+
+• Version information
+
+• About
+
+• Credits
+
+• Future placeholder settings where appropriate
+
+════════════════════════════════════════════════════════════
+
+ABOUT
+
+Create a modern About page.
+
+Include:
+
+Project overview.
+
+Technology stack.
+
+Engineering philosophy.
+
+Repository information.
+
+════════════════════════════════════════════════════════════
+
+CREDITS
+
+Create a Credits page.
+
+Include:
+
+Developer
+
+Vihaan Vaghela
+
+Technology acknowledgements
+
+Open-source acknowledgements (if applicable)
+
+Apple frameworks used
+
+════════════════════════════════════════════════════════════
+
+VERSION
+
+Create a Version screen showing:
+
+Application Version
+
+Build Number
+
+Repository Branch
+
+Build Date (if practical)
+
+Future changelog placeholder
+
+════════════════════════════════════════════════════════════
+
+HYPERION MATH EDITION
+
+Implement an offline assistant inspired by Hyperion.
+
+This is NOT an online chatbot.
+
+Do NOT require internet.
+
+Do NOT require an API key.
+
+Do NOT require external AI services.
+
+Instead:
+
+Create a lightweight local knowledge assistant.
+
+It should answer a curated collection of common mathematical questions using bundled content.
+
+Examples:
+
+• What is a derivative?
+
+• What is an integral?
+
+• How do logarithms work?
+
+• What is the quadratic formula?
+
+• Domain and range
+
+• Trigonometric identities
+
+• Coordinate geometry basics
+
+• Calculus fundamentals
+
+Responses should be concise, educational and suitable for students.
+
+Design the UI to resemble a native Apple assistant.
+
+════════════════════════════════════════════════════════════
+
+APPLE DESIGN
+
+Follow Apple's Human Interface Guidelines.
+
+Use:
+
+Native spacing
+
+Native typography
+
+Native navigation
+
+Native materials
+
+Native animations
+
+SF Symbols
+
+Dynamic Type
+
+VoiceOver
+
+Dark Mode
+
+Everything should feel native.
+
+════════════════════════════════════════════════════════════
+
+ENGINEERING QUALITY
+
+Leave the repository cleaner than you found it.
+
+Remove:
+
+Dead code
+
+Duplicate logic
+
+Unused assets
+
+Placeholder implementations
+
+Magic numbers
+
+Poor naming
+
+Large view files
+
+Refactor where appropriate.
+
+════════════════════════════════════════════════════════════
+
+BUILD
+
+Verify continuously:
+
+✓ Builds successfully
+
+✓ Runs in Simulator
+
+✓ Opens in Xcode
+
+✓ Navigation works
+
+✓ Tutorial works
+
+✓ Settings work
+
+✓ Hyperion Math works
+
+✓ Graphing works
+
+✓ No broken assets
+
+════════════════════════════════════════════════════════════
+
+FINAL AUDIT
+
+Before stopping:
+
+Perform a complete engineering review.
+
+Critique your own implementation.
+
+Improve:
+
+Architecture
+
+Animations
+
+Accessibility
+
+Performance
+
+Consistency
+
+Maintainability
+
+Continue refining until no significant improvements remain.
+
+════════════════════════════════════════════════════════════
+
+FINAL OBJECTIVE
+
+Treat this application as if it were preparing for an App Store-quality demonstration.
+
+Do not stop when it merely works.
+
+Stop when it is polished, stable, maintainable and something another senior Swift engineer would be proud to inherit.
+
+Own the repository.
+
+Ship Version 1.0.
