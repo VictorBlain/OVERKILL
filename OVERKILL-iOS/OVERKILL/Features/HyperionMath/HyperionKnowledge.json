@@ -1,0 +1,110 @@
+[
+  {
+    "id": "derivative-def",
+    "question": "What is a derivative?",
+    "keywords": ["derivative", "differentiation", "rate of change"],
+    "answer": "A derivative measures how a function changes as its input changes — the instantaneous rate of change.\n\nFormally: f'(x) = lim(h→0) [f(x+h) − f(x)] / h\n\nGeometrically, f'(x) is the slope of the tangent line to the curve at x.\n\nKey rules:\n• Power:    d/dx(xⁿ) = nxⁿ⁻¹\n• Product:  d/dx(fg) = f'g + fg'\n• Chain:    d/dx(f(g(x))) = f'(g(x))·g'(x)\n• Quotient: d/dx(f/g) = (f'g − fg') / g²"
+  },
+  {
+    "id": "integral-def",
+    "question": "What is an integral?",
+    "keywords": ["integral", "integration", "antiderivative", "area"],
+    "answer": "An integral is the reverse of differentiation — it accumulates change over an interval.\n\nDefinite integral: ∫ₐᵇ f(x) dx = area between f(x) and the x-axis from a to b.\n\nIndefinite integral: ∫ f(x) dx = F(x) + C, where F'(x) = f(x).\n\nFundamental Theorem of Calculus:\n∫ₐᵇ f(x) dx = F(b) − F(a)\n\nCommon integrals:\n• ∫xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ −1)\n• ∫sin(x) dx = −cos(x) + C\n• ∫eˣ dx = eˣ + C\n• ∫1/x dx = ln|x| + C"
+  },
+  {
+    "id": "logarithm",
+    "question": "How do logarithms work?",
+    "keywords": ["logarithm", "log", "ln", "natural log", "log base"],
+    "answer": "A logarithm answers: 'to what power must the base be raised to get this number?'\n\nlog_b(x) = y  ⟺  bʸ = x\n\nSpecial bases:\n• log₁₀(x) — common logarithm\n• ln(x) = log_e(x) — natural logarithm (base e ≈ 2.718)\n• log₂(x) — binary logarithm\n\nKey properties:\n• log(ab) = log(a) + log(b)\n• log(a/b) = log(a) − log(b)\n• log(aⁿ) = n·log(a)\n• log_b(b) = 1\n• log_b(1) = 0\n\nChange of base: log_b(x) = ln(x) / ln(b)"
+  },
+  {
+    "id": "quadratic-formula",
+    "question": "What is the quadratic formula?",
+    "keywords": ["quadratic", "formula", "roots", "ax2", "bx", "discriminant"],
+    "answer": "For ax² + bx + c = 0, the solutions are:\n\nx = (−b ± √(b² − 4ac)) / 2a\n\nThe discriminant Δ = b² − 4ac tells you:\n• Δ > 0: two distinct real roots\n• Δ = 0: one repeated real root\n• Δ < 0: two complex conjugate roots\n\nExample: x² − 5x + 6 = 0\na=1, b=−5, c=6\nΔ = 25 − 24 = 1\nx = (5 ± 1) / 2  →  x = 3 or x = 2"
+  },
+  {
+    "id": "domain-range",
+    "question": "What is domain and range?",
+    "keywords": ["domain", "range", "function", "input", "output"],
+    "answer": "Domain: the set of all valid input values (x) for a function.\nRange: the set of all possible output values (y) = f(x).\n\nExamples:\n• f(x) = x²\n  Domain: all real numbers (ℝ)\n  Range: y ≥ 0  [0, ∞)\n\n• f(x) = √x\n  Domain: x ≥ 0  [0, ∞)\n  Range: y ≥ 0  [0, ∞)\n\n• f(x) = 1/x\n  Domain: x ≠ 0  (−∞,0)∪(0,∞)\n  Range: y ≠ 0  (−∞,0)∪(0,∞)\n\n• f(x) = sin(x)\n  Domain: ℝ\n  Range: [−1, 1]"
+  },
+  {
+    "id": "trig-identities",
+    "question": "What are the main trigonometric identities?",
+    "keywords": ["trig", "trigonometric", "identities", "sin", "cos", "tan", "pythagorean"],
+    "answer": "Pythagorean identities:\n• sin²(x) + cos²(x) = 1\n• 1 + tan²(x) = sec²(x)\n• 1 + cot²(x) = csc²(x)\n\nAngle addition:\n• sin(A+B) = sin A·cos B + cos A·sin B\n• cos(A+B) = cos A·cos B − sin A·sin B\n• tan(A+B) = (tan A + tan B) / (1 − tan A·tan B)\n\nDouble angle:\n• sin(2x) = 2·sin(x)·cos(x)\n• cos(2x) = cos²(x) − sin²(x)\n\nReciprocal:\n• csc(x) = 1/sin(x)\n• sec(x) = 1/cos(x)\n• cot(x) = 1/tan(x)"
+  },
+  {
+    "id": "limits",
+    "question": "What is a limit?",
+    "keywords": ["limit", "lim", "approaches", "infinity", "continuity"],
+    "answer": "A limit describes the value a function approaches as x gets closer to a point.\n\nlim(x→a) f(x) = L means: as x → a, f(x) → L\n\nLimit laws (if both limits exist):\n• lim[f±g] = lim f ± lim g\n• lim[fg] = lim f · lim g\n• lim[f/g] = lim f / lim g  (if lim g ≠ 0)\n\nImportant limits:\n• lim(x→0) sin(x)/x = 1\n• lim(x→0) (1−cos x)/x = 0\n• lim(x→∞) (1 + 1/x)ˣ = e\n• lim(x→0) (eˣ−1)/x = 1\n\nL'Hôpital's rule: if 0/0 or ∞/∞,\nlim f(x)/g(x) = lim f'(x)/g'(x)"
+  },
+  {
+    "id": "taylor-series",
+    "question": "What is a Taylor series?",
+    "keywords": ["taylor", "maclaurin", "series", "expansion", "polynomial"],
+    "answer": "A Taylor series represents a smooth function as an infinite polynomial.\n\nAround x = a:\nf(x) = f(a) + f'(a)(x−a) + f''(a)(x−a)²/2! + f'''(a)(x−a)³/3! + …\n\nMaclaurin series (a = 0):\n• eˣ  = 1 + x + x²/2! + x³/3! + …\n• sin x = x − x³/3! + x⁵/5! − …\n• cos x = 1 − x²/2! + x⁴/4! − …\n• ln(1+x) = x − x²/2 + x³/3 − …\n• 1/(1−x) = 1 + x + x² + x³ + …  (|x| < 1)\n\nUses: approximation, integration of difficult functions, physics simulations."
+  },
+  {
+    "id": "vectors",
+    "question": "What are vectors?",
+    "keywords": ["vector", "magnitude", "dot product", "cross product", "component"],
+    "answer": "A vector has both magnitude (size) and direction.\n\nIn ℝ²: v = (vₓ, vᵧ)\nIn ℝ³: v = (vₓ, vᵧ, v_z)\n\nMagnitude: |v| = √(vₓ² + vᵧ²)\n\nOperations:\n• Addition:    (a,b) + (c,d) = (a+c, b+d)\n• Scalar mult: k·(a,b) = (ka, kb)\n• Dot product: a·b = aₓbₓ + aᵧbᵧ = |a||b|cos θ\n• Cross product (3D): a×b is ⊥ to both a and b, |a×b| = |a||b|sin θ\n\nUnit vector: û = v / |v|  (magnitude 1)\nProjection of a onto b: (a·b / |b|²)·b"
+  },
+  {
+    "id": "matrix-basics",
+    "question": "What is a matrix?",
+    "keywords": ["matrix", "matrices", "row", "column", "determinant", "inverse"],
+    "answer": "A matrix is a rectangular array of numbers arranged in rows and columns.\n\nAn m×n matrix has m rows and n columns.\n\nKey concepts:\n• Determinant: a scalar summarising the matrix. det(A) = 0 means A is singular.\n• Inverse: A⁻¹ where A·A⁻¹ = I (identity matrix)\n• Transpose: Aᵀ swaps rows and columns\n• Eigenvalue: λ where Av = λv for some non-zero vector v\n\nFor a 2×2 matrix [a b; c d]:\n• det = ad − bc\n• inverse = (1/det)·[d −b; −c a]\n\nMatrix multiplication (A is m×n, B is n×p → result is m×p):\n(AB)ᵢⱼ = Σₖ Aᵢₖ Bₖⱼ"
+  },
+  {
+    "id": "chain-rule",
+    "question": "How does the chain rule work?",
+    "keywords": ["chain rule", "composite", "composition"],
+    "answer": "The chain rule differentiates composite functions.\n\nIf y = f(g(x)), then:\ndy/dx = f'(g(x)) · g'(x)\n\n'Derivative of the outer times derivative of the inner'\n\nExamples:\n• d/dx[sin(x²)] = cos(x²) · 2x\n• d/dx[e^(3x)] = e^(3x) · 3\n• d/dx[(x²+1)⁵] = 5(x²+1)⁴ · 2x\n• d/dx[ln(cos x)] = 1/cos(x) · (−sin x) = −tan x\n\nFor three functions f(g(h(x))):\ndy/dx = f'(g(h(x))) · g'(h(x)) · h'(x)"
+  },
+  {
+    "id": "euler-number",
+    "question": "What is Euler's number e?",
+    "keywords": ["euler", "e", "exponential", "natural base", "2.718"],
+    "answer": "e ≈ 2.71828… is Euler's number, the base of the natural logarithm.\n\nDefinitions:\n• e = lim(n→∞) (1 + 1/n)ⁿ\n• e = 1 + 1 + 1/2! + 1/3! + 1/4! + …\n\nWhy it's special:\n• d/dx(eˣ) = eˣ  — the only function that is its own derivative!\n• ∫eˣ dx = eˣ + C\n• ln(e) = 1\n\nEuler's identity: eⁱᵖⁱ + 1 = 0  (combining e, i, π, 1, 0)\n\nCompound interest: A = P·eʳᵗ\nPopulation growth: P(t) = P₀·eᵏᵗ"
+  },
+  {
+    "id": "pythagorean-theorem",
+    "question": "What is the Pythagorean theorem?",
+    "keywords": ["pythagorean", "pythagoras", "right triangle", "hypotenuse", "a2 b2 c2"],
+    "answer": "In a right triangle with legs a, b and hypotenuse c:\n\na² + b² = c²\n\nThe hypotenuse is always the side opposite the right angle.\n\nExamples:\n• 3² + 4² = 5²  → 9 + 16 = 25 ✓ (3-4-5 triple)\n• 5² + 12² = 13²\n• 8² + 15² = 17²\n\nDistance formula (derived from Pythagoras):\nd = √((x₂−x₁)² + (y₂−y₁)²)\n\nIn 3D:\nd = √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²)"
+  },
+  {
+    "id": "statistics-basics",
+    "question": "What are mean, median, and mode?",
+    "keywords": ["mean", "median", "mode", "average", "statistics", "central tendency"],
+    "answer": "These are measures of central tendency — they describe the 'centre' of a dataset.\n\nMean (average):\nSum of all values divided by count.\nx̄ = (x₁ + x₂ + … + xₙ) / n\n\nMedian:\nThe middle value when sorted. If n is even, average the two middle values.\nRobust to outliers.\n\nMode:\nThe most frequently occurring value(s).\nA dataset can have multiple modes or none.\n\nWhen to use:\n• Mean: symmetric distributions, no extreme outliers\n• Median: skewed data, income, house prices\n• Mode: categorical data, most popular item\n\nExample: {2, 4, 4, 6, 10}\n• Mean = 26/5 = 5.2\n• Median = 4\n• Mode = 4"
+  },
+  {
+    "id": "standard-deviation",
+    "question": "What is standard deviation?",
+    "keywords": ["standard deviation", "variance", "spread", "sigma", "bell curve"],
+    "answer": "Standard deviation (σ) measures how spread out values are from the mean.\n\nFormula (population):\nσ = √( Σ(xᵢ − x̄)² / n )\n\nVariance = σ²\n\nInterpretation:\n• Small σ: values cluster tightly around the mean\n• Large σ: values are spread out widely\n\nFor a normal distribution (bell curve):\n• 68% of values fall within ±1σ of the mean\n• 95% fall within ±2σ\n• 99.7% fall within ±3σ\n\nZ-score: z = (x − μ) / σ\nTells you how many standard deviations x is from the mean."
+  },
+  {
+    "id": "polar-coordinates",
+    "question": "What are polar coordinates?",
+    "keywords": ["polar", "coordinates", "r", "theta", "angle", "cartesian"],
+    "answer": "Polar coordinates describe a point using (r, θ) where:\n• r = distance from origin\n• θ = angle from positive x-axis (radians)\n\nConversion:\n• Polar → Cartesian: x = r·cos θ,  y = r·sin θ\n• Cartesian → Polar: r = √(x²+y²),  θ = atan2(y, x)\n\nUseful for curves that are naturally circular:\n• Circle: r = a\n• Spiral: r = aθ (Archimedean spiral)\n• Rose: r = cos(nθ)\n• Cardioid: r = a(1 + cos θ)\n\nArea in polar: A = ½ ∫_α^β r² dθ"
+  },
+  {
+    "id": "probability",
+    "question": "What are the basics of probability?",
+    "keywords": ["probability", "chance", "random", "event", "sample space"],
+    "answer": "Probability measures how likely an event is to occur.\n\nRange: 0 ≤ P(A) ≤ 1\n• P = 0: impossible\n• P = 1: certain\n\nBasic rules:\n• P(A') = 1 − P(A)  [complement]\n• P(A∪B) = P(A) + P(B) − P(A∩B)  [addition]\n• P(A∩B) = P(A)·P(B)  if A, B independent  [multiplication]\n\nConditional probability:\nP(A|B) = P(A∩B) / P(B)  [probability of A given B]\n\nBayes' theorem:\nP(A|B) = P(B|A)·P(A) / P(B)\n\nCombinations: C(n,k) = n! / (k!(n−k)!)\nPermutations: P(n,k) = n! / (n−k)!"
+  },
+  {
+    "id": "complex-numbers",
+    "question": "What are complex numbers?",
+    "keywords": ["complex", "imaginary", "i", "real part", "imaginary part", "modulus"],
+    "answer": "Complex numbers extend real numbers by introducing i = √(−1).\n\nForm: z = a + bi  where a = real part, b = imaginary part\n\nOperations:\n• Addition: (a+bi) + (c+di) = (a+c) + (b+d)i\n• Multiply: (a+bi)(c+di) = (ac−bd) + (ad+bc)i\n• Conjugate: z̄ = a − bi\n• Modulus: |z| = √(a²+b²)\n\nPolar form: z = r·eⁱᶿ = r(cos θ + i·sin θ)\nwhere r = |z|, θ = arg(z)\n\nDe Moivre: (cos θ + i·sin θ)ⁿ = cos(nθ) + i·sin(nθ)\n\nFundamental Theorem: every polynomial of degree n has exactly n complex roots."
+  }
+]
