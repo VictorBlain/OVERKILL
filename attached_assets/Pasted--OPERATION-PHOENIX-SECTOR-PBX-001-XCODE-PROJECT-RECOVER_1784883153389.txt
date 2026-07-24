@@ -1,0 +1,243 @@
+# OPERATION PHOENIX
+## SECTOR PBX-001
+### XCODE PROJECT RECOVERY
+
+STOP.
+
+Do NOT regenerate this project.
+
+Do NOT rewrite the application.
+
+Do NOT migrate code.
+
+Do NOT modify working Swift source files unless absolutely necessary.
+
+The application logic is NOT the problem.
+
+The failure occurs BEFORE compilation.
+
+═══════════════════════════════════════════════════════════════════════
+
+MISSION
+
+The Xcode project is currently unreadable.
+
+Xcode reports:
+
+"The project is damaged and cannot be opened due to a parse error."
+
+Terminal verification confirms:
+
+plutil -lint OVERKILL.xcodeproj/project.pbxproj
+
+returns
+
+Unexpected character '/' at line 1.
+
+This indicates the project metadata itself is malformed.
+
+The objective is to restore the Xcode project to a completely valid state.
+
+═══════════════════════════════════════════════════════════════════════
+
+YOUR ROLE
+
+You are acting as:
+
+• Principal Apple Build Engineer
+
+• Xcode Project Specialist
+
+• Swift Build System Engineer
+
+• Repository Recovery Engineer
+
+Treat this as a recovery mission.
+
+═══════════════════════════════════════════════════════════════════════
+
+PRIMARY OBJECTIVE
+
+Repair ONLY the Xcode project infrastructure.
+
+Specifically:
+
+• project.pbxproj
+
+• workspace metadata (if required)
+
+• build configuration
+
+• target membership
+
+• file references
+
+• build phases
+
+• source references
+
+Do NOT alter application behaviour.
+
+═══════════════════════════════════════════════════════════════════════
+
+MANDATORY INVESTIGATION
+
+Before changing anything:
+
+Inspect the first lines of
+
+OVERKILL.xcodeproj/project.pbxproj
+
+Determine exactly why parsing fails.
+
+Identify:
+
+• corruption
+
+• merge conflict remnants
+
+• invalid syntax
+
+• accidental overwrite
+
+• malformed property list
+
+Do NOT guess.
+
+Use evidence.
+
+═══════════════════════════════════════════════════════════════════════
+
+RECOVERY STRATEGY
+
+If the project file is repairable:
+
+Repair it.
+
+If the project file is beyond recovery:
+
+Reconstruct a brand-new project.pbxproj.
+
+Preserve:
+
+• project name
+
+• targets
+
+• bundle identifier
+
+• deployment target
+
+• Info.plist
+
+• Assets
+
+• every Swift source file
+
+• folder hierarchy
+
+• build settings wherever practical
+
+The regenerated project should behave exactly like a professionally created Xcode project.
+
+═══════════════════════════════════════════════════════════════════════
+
+SOURCE FILES
+
+Every Swift source currently in the repository must be included in the application target.
+
+Verify:
+
+Target Membership
+
+Compile Sources
+
+Resources
+
+Asset Catalogs
+
+Info.plist
+
+Launch assets
+
+Nothing should be orphaned.
+
+═══════════════════════════════════════════════════════════════════════
+
+VALIDATION
+
+Do NOT stop after generating a project.
+
+Verify:
+
+✓ project.pbxproj passes parsing
+
+✓ Xcode opens successfully
+
+✓ No project corruption warnings
+
+✓ Build succeeds
+
+✓ Simulator launches
+
+✓ Every screen is reachable
+
+✓ Assets load
+
+✓ Build settings are valid
+
+═══════════════════════════════════════════════════════════════════════
+
+QUALITY
+
+The repaired project should look as though it was originally created by Xcode.
+
+Avoid duplicate references.
+
+Avoid stale UUIDs.
+
+Avoid broken build phases.
+
+Avoid invalid paths.
+
+Avoid missing target memberships.
+
+Avoid malformed property list syntax.
+
+═══════════════════════════════════════════════════════════════════════
+
+COMMIT POLICY
+
+Once the project opens successfully and validation passes:
+
+Commit immediately.
+
+Example:
+
+git add .
+
+git commit -m "Repair Xcode project metadata and restore valid project.pbxproj"
+
+Push the branch.
+
+═══════════════════════════════════════════════════════════════════════
+
+FINAL GOAL
+
+When I double-click:
+
+OVERKILL.xcodeproj
+
+Xcode should open normally.
+
+No parse errors.
+
+No corruption warnings.
+
+No manual repair steps.
+
+A clean Build (⌘B) should succeed.
+
+Treat this as a release-blocking defect.
+
+Do not stop until the project behaves exactly like a professional native Swift application created by Xcode itself.
