@@ -6,55 +6,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7382E0C2DC99710B58A43C5D /* OVERKILLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */; };
 		A68F05BC90A940C4D543BBEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E6686B99D2C3ABB72ED65 /* ContentView.swift */; };
+		7382E0C2DC99710B58A43C5D /* OVERKILLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */; };
 		9E57D22199E619D981F3270F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE52FF0172F0A46DFA769B /* AppState.swift */; };
 		D4EA6A8BC4A14A8CC868853A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4147F3DD658F7558DE5 /* Theme.swift */; };
-		E436DF0D2C280C0CC8C8A548 /* GraphFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0AF2BAA14DC5A09CE7961 /* GraphFunction.swift */; };
 		945EC803246C9C766197B301 /* ExpressionEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AD31BC4A898B48A43FA17 /* ExpressionEvaluator.swift */; };
 		F59F61642A74AA3C041FA873 /* MatrixEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF2788C5FE1381788CB9A26 /* MatrixEngine.swift */; };
 		6EA040177CDE3D8E69F98099 /* StatisticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB445FA93C586BA34EE6B498 /* StatisticsEngine.swift */; };
+		E436DF0D2C280C0CC8C8A548 /* GraphFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0AF2BAA14DC5A09CE7961 /* GraphFunction.swift */; };
+		01E032C3BB3C6DBD7ACFAC6A /* CalculationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487333BF00C9498386A6F90 /* CalculationResult.swift */; };
+		16F7CB93367983479CA809BC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7F79B51AB94567CBB013 /* CalculatorView.swift */; };
+		0C1EEB9B596273B3C2A30AD8 /* FunctionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B5CD964F64F4078B8FB73C /* FunctionPanel.swift */; };
+		01538876377285BC0E4866C1 /* GraphCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9735896476BAF9479B4F54AF /* GraphCanvas.swift */; };
+		451446835D9F5F867C5A5837 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFF6433FE9848F5CDEE48E /* GraphView.swift */; };
+		046D57789EBD2D53C5235E15 /* HyperionKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14788B8C0A07A42A61CA288A /* HyperionKnowledge.swift */; };
+		79DE4F3D2CB1AC630B490A0E /* HyperionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74233F79784BD61BCB5B2282 /* HyperionView.swift */; };
+		2CE3986966B234B862B58044 /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705F4A1EE48E21517941CB3 /* MatrixView.swift */; };
 		1ED7E0DED0496662893EFA9E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED783FAA0EBB2A831B874EB /* OnboardingView.swift */; };
 		8AA92D604758E500666DAC71 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E40927E9863C106F30FF6C8 /* TutorialView.swift */; };
-		451446835D9F5F867C5A5837 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFF6433FE9848F5CDEE48E /* GraphView.swift */; };
-		01538876377285BC0E4866C1 /* GraphCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9735896476BAF9479B4F54AF /* GraphCanvas.swift */; };
-		0C1EEB9B596273B3C2A30AD8 /* FunctionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B5CD964F64F4078B8FB73C /* FunctionPanel.swift */; };
-		16F7CB93367983479CA809BC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7F79B51AB94567CBB013 /* CalculatorView.swift */; };
-		2CE3986966B234B862B58044 /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705F4A1EE48E21517941CB3 /* MatrixView.swift */; };
-		6D1A88E0F78745DD81C63243 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B9B8C5C43B2CE674DC8BC /* StatisticsView.swift */; };
-		79DE4F3D2CB1AC630B490A0E /* HyperionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74233F79784BD61BCB5B2282 /* HyperionView.swift */; };
-		046D57789EBD2D53C5235E15 /* HyperionKnowledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14788B8C0A07A42A61CA288A /* HyperionKnowledge.swift */; };
-		87068F7416D035ABD36C0EA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340C730F19B209D957BFA5DC /* SettingsView.swift */; };
 		24947480D0A306CD0EE7D27A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BD9672B4E47305C2A5766 /* AboutView.swift */; };
 		CAFF3458B7E1AC17246FB3A3 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCCA434996BB9637E69870E /* CreditsView.swift */; };
+		87068F7416D035ABD36C0EA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340C730F19B209D957BFA5DC /* SettingsView.swift */; };
 		70AC05BFBC005A494690F0DD /* VersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F3D8BC6FFC0EEB0947A72B /* VersionView.swift */; };
+		6D1A88E0F78745DD81C63243 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B9B8C5C43B2CE674DC8BC /* StatisticsView.swift */; };
+		5553264752EDF7A186443D19 /* CalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93691DB3E58FE343D5048012 /* CalculationService.swift */; };
+		31BBB76123D90DB3F2DCCA2D /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0E3F9927167BB05F8128E /* PersistenceService.swift */; };
+		1E76B47E4AE8942408E774C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994846003B964944EE5246DC /* Extensions.swift */; };
 		37A18F5FBBC9EE327291DDA7 /* HyperionKnowledge.json in Resources */ = {isa = PBXBuildFile; fileRef = DEFC09B334258A350C5C86B7 /* HyperionKnowledge.json */; };
 		95F893ABF8DE2704294E63B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358924C419ED52B84228412A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OVERKILLApp.swift"; sourceTree = "<group>"; };
 		E08E6686B99D2C3ABB72ED65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OVERKILLApp.swift"; sourceTree = "<group>"; };
 		6BCE52FF0172F0A46DFA769B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState.swift"; sourceTree = "<group>"; };
 		20A5B4147F3DD658F7558DE5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme.swift"; sourceTree = "<group>"; };
-		35B0AF2BAA14DC5A09CE7961 /* GraphFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphFunction.swift"; sourceTree = "<group>"; };
 		FD0AD31BC4A898B48A43FA17 /* ExpressionEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpressionEvaluator.swift"; sourceTree = "<group>"; };
 		1AF2788C5FE1381788CB9A26 /* MatrixEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatrixEngine.swift"; sourceTree = "<group>"; };
 		CB445FA93C586BA34EE6B498 /* StatisticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticsEngine.swift"; sourceTree = "<group>"; };
+		35B0AF2BAA14DC5A09CE7961 /* GraphFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphFunction.swift"; sourceTree = "<group>"; };
+		A487333BF00C9498386A6F90 /* CalculationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationResult.swift"; sourceTree = "<group>"; };
+		DB1A7F79B51AB94567CBB013 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorView.swift"; sourceTree = "<group>"; };
+		C2B5CD964F64F4078B8FB73C /* FunctionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionPanel.swift"; sourceTree = "<group>"; };
+		9735896476BAF9479B4F54AF /* GraphCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphCanvas.swift"; sourceTree = "<group>"; };
+		30BFF6433FE9848F5CDEE48E /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphView.swift"; sourceTree = "<group>"; };
+		14788B8C0A07A42A61CA288A /* HyperionKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyperionKnowledge.swift"; sourceTree = "<group>"; };
+		74233F79784BD61BCB5B2282 /* HyperionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyperionView.swift"; sourceTree = "<group>"; };
+		1705F4A1EE48E21517941CB3 /* MatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatrixView.swift"; sourceTree = "<group>"; };
 		8ED783FAA0EBB2A831B874EB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView.swift"; sourceTree = "<group>"; };
 		4E40927E9863C106F30FF6C8 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorialView.swift"; sourceTree = "<group>"; };
-		30BFF6433FE9848F5CDEE48E /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphView.swift"; sourceTree = "<group>"; };
-		9735896476BAF9479B4F54AF /* GraphCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GraphCanvas.swift"; sourceTree = "<group>"; };
-		C2B5CD964F64F4078B8FB73C /* FunctionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FunctionPanel.swift"; sourceTree = "<group>"; };
-		DB1A7F79B51AB94567CBB013 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculatorView.swift"; sourceTree = "<group>"; };
-		1705F4A1EE48E21517941CB3 /* MatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatrixView.swift"; sourceTree = "<group>"; };
-		2C1B9B8C5C43B2CE674DC8BC /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticsView.swift"; sourceTree = "<group>"; };
-		74233F79784BD61BCB5B2282 /* HyperionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyperionView.swift"; sourceTree = "<group>"; };
-		14788B8C0A07A42A61CA288A /* HyperionKnowledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyperionKnowledge.swift"; sourceTree = "<group>"; };
-		340C730F19B209D957BFA5DC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>"; };
 		9B5BD9672B4E47305C2A5766 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView.swift"; sourceTree = "<group>"; };
 		2DCCA434996BB9637E69870E /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditsView.swift"; sourceTree = "<group>"; };
+		340C730F19B209D957BFA5DC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>"; };
 		F9F3D8BC6FFC0EEB0947A72B /* VersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VersionView.swift"; sourceTree = "<group>"; };
+		2C1B9B8C5C43B2CE674DC8BC /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticsView.swift"; sourceTree = "<group>"; };
+		93691DB3E58FE343D5048012 /* CalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalculationService.swift"; sourceTree = "<group>"; };
+		D6A0E3F9927167BB05F8128E /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceService.swift"; sourceTree = "<group>"; };
+		994846003B964944EE5246DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions.swift"; sourceTree = "<group>"; };
 		DEFC09B334258A350C5C86B7 /* HyperionKnowledge.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "HyperionKnowledge.json"; sourceTree = "<group>"; };
 		358924C419ED52B84228412A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185E4B3D00122287C06829AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,28 +74,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7382E0C2DC99710B58A43C5D /* OVERKILLApp.swift in Sources */,
 				A68F05BC90A940C4D543BBEF /* ContentView.swift in Sources */,
+				7382E0C2DC99710B58A43C5D /* OVERKILLApp.swift in Sources */,
 				9E57D22199E619D981F3270F /* AppState.swift in Sources */,
 				D4EA6A8BC4A14A8CC868853A /* Theme.swift in Sources */,
-				E436DF0D2C280C0CC8C8A548 /* GraphFunction.swift in Sources */,
 				945EC803246C9C766197B301 /* ExpressionEvaluator.swift in Sources */,
 				F59F61642A74AA3C041FA873 /* MatrixEngine.swift in Sources */,
 				6EA040177CDE3D8E69F98099 /* StatisticsEngine.swift in Sources */,
+				E436DF0D2C280C0CC8C8A548 /* GraphFunction.swift in Sources */,
+				01E032C3BB3C6DBD7ACFAC6A /* CalculationResult.swift in Sources */,
+				16F7CB93367983479CA809BC /* CalculatorView.swift in Sources */,
+				0C1EEB9B596273B3C2A30AD8 /* FunctionPanel.swift in Sources */,
+				01538876377285BC0E4866C1 /* GraphCanvas.swift in Sources */,
+				451446835D9F5F867C5A5837 /* GraphView.swift in Sources */,
+				046D57789EBD2D53C5235E15 /* HyperionKnowledge.swift in Sources */,
+				79DE4F3D2CB1AC630B490A0E /* HyperionView.swift in Sources */,
+				2CE3986966B234B862B58044 /* MatrixView.swift in Sources */,
 				1ED7E0DED0496662893EFA9E /* OnboardingView.swift in Sources */,
 				8AA92D604758E500666DAC71 /* TutorialView.swift in Sources */,
-				451446835D9F5F867C5A5837 /* GraphView.swift in Sources */,
-				01538876377285BC0E4866C1 /* GraphCanvas.swift in Sources */,
-				0C1EEB9B596273B3C2A30AD8 /* FunctionPanel.swift in Sources */,
-				16F7CB93367983479CA809BC /* CalculatorView.swift in Sources */,
-				2CE3986966B234B862B58044 /* MatrixView.swift in Sources */,
-				6D1A88E0F78745DD81C63243 /* StatisticsView.swift in Sources */,
-				79DE4F3D2CB1AC630B490A0E /* HyperionView.swift in Sources */,
-				046D57789EBD2D53C5235E15 /* HyperionKnowledge.swift in Sources */,
-				87068F7416D035ABD36C0EA6 /* SettingsView.swift in Sources */,
 				24947480D0A306CD0EE7D27A /* AboutView.swift in Sources */,
 				CAFF3458B7E1AC17246FB3A3 /* CreditsView.swift in Sources */,
+				87068F7416D035ABD36C0EA6 /* SettingsView.swift in Sources */,
 				70AC05BFBC005A494690F0DD /* VersionView.swift in Sources */,
+				6D1A88E0F78745DD81C63243 /* StatisticsView.swift in Sources */,
+				5553264752EDF7A186443D19 /* CalculationService.swift in Sources */,
+				31BBB76123D90DB3F2DCCA2D /* PersistenceService.swift in Sources */,
+				1E76B47E4AE8942408E774C1 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,10 +126,12 @@
 		1AD2660E7590A5E98A63E63A /* OVERKILL */ = {
 			isa = PBXGroup;
 			children = (
-				C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */,
 				E08E6686B99D2C3ABB72ED65 /* ContentView.swift */,
+				C805B7FF2CC2AAF616EB0A2D /* OVERKILLApp.swift */,
 				7E63FB79D8432E92B2BF05B7 /* Core */,
 				4ABCA3AA88E186E548666A06 /* Features */,
+				FA1196890D421541891D17B1 /* Services */,
+				FD300FCC63CD372F91EB5F83 /* Utilities */,
 				358924C419ED52B84228412A /* Assets.xcassets */,
 				185E4B3D00122287C06829AA /* Info.plist */,
 			);
@@ -152,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				35B0AF2BAA14DC5A09CE7961 /* GraphFunction.swift */,
+				A487333BF00C9498386A6F90 /* CalculationResult.swift */,
 			);
 			name = Models;
 			path = Models;
@@ -184,9 +199,9 @@
 		DDA212FA9E785C4403F4574A /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				30BFF6433FE9848F5CDEE48E /* GraphView.swift */,
-				9735896476BAF9479B4F54AF /* GraphCanvas.swift */,
 				C2B5CD964F64F4078B8FB73C /* FunctionPanel.swift */,
+				9735896476BAF9479B4F54AF /* GraphCanvas.swift */,
+				30BFF6433FE9848F5CDEE48E /* GraphView.swift */,
 			);
 			name = Graph;
 			path = Graph;
@@ -195,8 +210,8 @@
 		4AD10E7D2ED6F31C993D4E1E /* HyperionMath */ = {
 			isa = PBXGroup;
 			children = (
-				74233F79784BD61BCB5B2282 /* HyperionView.swift */,
 				14788B8C0A07A42A61CA288A /* HyperionKnowledge.swift */,
+				74233F79784BD61BCB5B2282 /* HyperionView.swift */,
 				DEFC09B334258A350C5C86B7 /* HyperionKnowledge.json */,
 			);
 			name = HyperionMath;
@@ -225,9 +240,9 @@
 		60BF54E20DF95633DFD4F7A6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				340C730F19B209D957BFA5DC /* SettingsView.swift */,
 				9B5BD9672B4E47305C2A5766 /* AboutView.swift */,
 				2DCCA434996BB9637E69870E /* CreditsView.swift */,
+				340C730F19B209D957BFA5DC /* SettingsView.swift */,
 				F9F3D8BC6FFC0EEB0947A72B /* VersionView.swift */,
 			);
 			name = Settings;
@@ -241,6 +256,25 @@
 			);
 			name = Statistics;
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		FA1196890D421541891D17B1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93691DB3E58FE343D5048012 /* CalculationService.swift */,
+				D6A0E3F9927167BB05F8128E /* PersistenceService.swift */,
+			);
+			name = Services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD300FCC63CD372F91EB5F83 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				994846003B964944EE5246DC /* Extensions.swift */,
+			);
+			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +338,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vihaanvaghela.overkill;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = -Onone;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 			};
 			name = Debug;
@@ -328,13 +362,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vihaanvaghela.overkill;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = -Owholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

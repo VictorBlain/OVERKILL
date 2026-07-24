@@ -1,14 +1,15 @@
 import SwiftUI
 
-private typealias Size = Int   // 2, 3, or 4
+private typealias MatSize = Int   // 2, 3, or 4
 
-private enum MatOp: String, CaseIterable {
-    case det        = "Determinant"
-    case inv        = "Inverse"
-    case transpose  = "Transpose"
-    case multiply   = "A × A"
+private enum MatOp: String, CaseIterable, Identifiable {
+    var id: String { rawValue }
+    case det         = "Determinant"
+    case inv         = "Inverse"
+    case transpose   = "Transpose"
+    case multiply    = "A × A"
     case eigenvalues = "Eigenvalues"
-    case lu         = "LU Decomp"
+    case lu          = "LU Decomp"
 
     var icon: String {
         switch self {
@@ -23,10 +24,10 @@ private enum MatOp: String, CaseIterable {
 }
 
 struct MatrixView: View {
-    @State private var size: Size = 3
-    @State private var cells: [[String]] = Self.makeEmpty(3)
+    @State private var size: MatSize = 3
+    @State private var cells: [[String]] = MatrixView.makeEmpty(3)
     @State private var operation: MatOp = .det
-    @State private var result: String? = nil
+    @State private var result: String?
     @State private var isComputing = false
 
     var body: some View {
@@ -37,7 +38,10 @@ struct MatrixView: View {
                     matrixGrid
                     operationGrid
                     computeButton
-                    if let r = result { resultCard(r) }
+                    if let r = result {
+                        resultCard(r)
+                            .transition(.move(edge: .bottom).combined(with: .opacity))
+                    }
                     Spacer(minLength: 40)
                 }
                 .padding(16)
@@ -59,9 +63,11 @@ struct MatrixView: View {
             HStack(spacing: 8) {
                 ForEach([2, 3, 4], id: \.self) { s in
                     Button("\(s)×\(s)") {
-                        size = s
-                        cells = Self.makeEmpty(s)
-                        result = nil
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            size = s
+                            cells = MatrixView.makeEmpty(s)
+                            result = nil
+                        }
                     }
                     .font(.system(size: 14, weight: .semibold, design: .monospaced))
                     .foregroundStyle(size == s ? .white : Theme.muted)
@@ -71,6 +77,7 @@ struct MatrixView: View {
                         RoundedRectangle(cornerRadius: Theme.r12, style: .continuous)
                             .fill(size == s ? Theme.electric : Theme.surface2)
                     )
+                    .animation(.easeInOut(duration: 0.15), value: size)
                 }
 
                 Spacer()
@@ -97,41 +104,38 @@ struct MatrixView: View {
     }
 
     private var matrixGrid: some View {
-        VStack(alignment: .center, spacing: 8) {
+        VStack(alignment: .leading, spacing: 10) {
             Text("MATRIX A")
                 .font(.system(size: 11, weight: .semibold, design: .monospaced))
                 .foregroundStyle(Theme.muted)
-                .frame(maxWidth: .infinity, alignment: .leading)
 
-            ForEach(0..<size, id: \.self) { row in
-                HStack(spacing: 8) {
-                    ForEach(0..<size, id: \.self) { col in
-                        TextField("0", text: Binding(
-                            get: { cells[row][col] },
-                            set: { cells[row][col] = $0 }
-                        ))
-                        .font(.system(size: 16, weight: .medium, design: .monospaced))
-                        .foregroundStyle(Theme.foreground)
-                        .multilineTextAlignment(.center)
-                        .keyboardType(.numbersAndPunctuation)
-                        .frame(width: cellWidth, height: cellWidth)
-                        .background(Theme.surface2)
-                        .clipShape(RoundedRectangle(cornerRadius: Theme.r8, style: .continuous))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: Theme.r8, style: .continuous)
-                                .strokeBorder(Theme.border, lineWidth: 0.5)
-                        )
+            // Use GeometryReader for cell sizing — no UIScreen
+            GeometryReader { geo in
+                let spacing: CGFloat = 8
+                let totalSpacing = spacing * CGFloat(size - 1)
+                let cellW = min((geo.size.width - totalSpacing) / CGFloat(size), 76)
+
+                VStack(spacing: spacing) {
+                    ForEach(0..<size, id: \.self) { row in
+                        HStack(spacing: spacing) {
+                            ForEach(0..<size, id: \.self) { col in
+                                MatrixCell(
+                                    text: Binding(
+                                        get: { cells[row][col] },
+                                        set: { cells[row][col] = $0 }
+                                    ),
+                                    width: cellW
+                                )
+                            }
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity)
             }
+            .frame(height: CGFloat(size) * 52 + CGFloat(size - 1) * 8)
         }
         .padding(16)
         .glassCard()
-    }
-
-    private var cellWidth: CGFloat {
-        let available = UIScreen.main.bounds.width - 32 - 32 - CGFloat(size - 1) * 8
-        return min(available / CGFloat(size), 72)
     }
 
     private var operationGrid: some View {
@@ -140,17 +144,21 @@ struct MatrixView: View {
                 .font(.system(size: 11, weight: .semibold, design: .monospaced))
                 .foregroundStyle(Theme.muted)
 
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-                ForEach(MatOp.allCases, id: \.self) { op in
+            LazyVGrid(
+                columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
+                spacing: 8
+            ) {
+                ForEach(MatOp.allCases) { op in
                     Button {
                         withAnimation(.easeInOut(duration: 0.15)) { operation = op }
                     } label: {
-                        VStack(spacing: 4) {
+                        VStack(spacing: 5) {
                             Image(systemName: op.icon)
                                 .font(.system(size: 15))
                             Text(op.rawValue)
                                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                                 .multilineTextAlignment(.center)
+                                .lineLimit(2)
                         }
                         .foregroundStyle(operation == op ? .white : Theme.muted)
                         .frame(maxWidth: .infinity)
@@ -160,6 +168,7 @@ struct MatrixView: View {
                                 .fill(operation == op ? Theme.electric : Theme.surface2)
                         )
                     }
+                    .animation(.easeInOut(duration: 0.15), value: operation)
                 }
             }
         }
@@ -169,52 +178,73 @@ struct MatrixView: View {
 
     private var computeButton: some View {
         Button { compute() } label: {
-            HStack {
-                if isComputing { ProgressView().tint(.white) }
-                else { Image(systemName: "play.fill") }
+            HStack(spacing: 10) {
+                if isComputing {
+                    ProgressView().tint(.white).scaleEffect(0.85)
+                } else {
+                    Image(systemName: "play.fill")
+                }
                 Text(isComputing ? "Computing…" : "Compute")
                     .font(.system(size: 16, weight: .semibold))
             }
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
-            .background(Theme.electric)
+            .background(isComputing ? Theme.electric.opacity(0.6) : Theme.electric)
             .clipShape(RoundedRectangle(cornerRadius: Theme.r12, style: .continuous))
         }
         .disabled(isComputing)
+        .animation(.easeInOut(duration: 0.15), value: isComputing)
     }
 
     private func resultCard(_ r: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(operation.rawValue.uppercased())
-                .font(.system(size: 11, weight: .semibold, design: .monospaced))
-                .foregroundStyle(Theme.electric)
+            HStack {
+                Text(operation.rawValue.uppercased())
+                    .font(.system(size: 11, weight: .semibold, design: .monospaced))
+                    .foregroundStyle(Theme.electric)
+                Spacer()
+                Button {
+                    copyToClipboard(r)
+                } label: {
+                    Image(systemName: "doc.on.doc")
+                        .font(.system(size: 13))
+                        .foregroundStyle(Theme.muted)
+                }
+            }
 
-            ScrollView(.horizontal, showsIndicators: false) {
+            ScrollView([.horizontal, .vertical], showsIndicators: false) {
                 Text(r)
-                    .font(.system(size: 15, design: .monospaced))
+                    .font(.system(size: 14, design: .monospaced))
                     .foregroundStyle(Theme.foreground)
                     .textSelection(.enabled)
+                    .padding(4)
             }
+            .frame(maxHeight: 240)
         }
         .padding(16)
         .glassCard()
-        .transition(.move(edge: .bottom).combined(with: .opacity))
     }
 
     // MARK: - Actions
 
     private func fillIdentity() {
-        cells = (0..<size).map { i in (0..<size).map { j in i == j ? "1" : "0" } }
+        withAnimation(.easeInOut(duration: 0.2)) {
+            cells = (0..<size).map { i in (0..<size).map { j in i == j ? "1" : "0" } }
+            result = nil
+        }
     }
 
     private func fillRandom() {
-        cells = (0..<size).map { _ in (0..<size).map { _ in "\(Int.random(in: -9...9))" } }
+        withAnimation(.easeInOut(duration: 0.2)) {
+            cells = (0..<size).map { _ in (0..<size).map { _ in "\(Int.random(in: -9...9))" } }
+            result = nil
+        }
     }
 
     private func compute() {
         isComputing = true
-        let mat = cells.map { row in row.map { Double($0) ?? 0 } }
+        let mat = cells.map { row in row.map { Double($0) ?? 0.0 } }
         let op = operation
 
         Task {
@@ -222,25 +252,34 @@ struct MatrixView: View {
                 switch op {
                 case .det:
                     let d = MatrixEngine.determinant(mat)
-                    return d.isNaN ? "Undefined" : String(format: "%.6f", d)
+                    return d.isNaN ? "Undefined" : String(format: "%.6g", d)
+
                 case .inv:
-                    if let inv = MatrixEngine.inverse(mat) { return MatrixEngine.format(inv) }
-                    return "Matrix is singular (not invertible)"
+                    guard let inv = MatrixEngine.inverse(mat) else {
+                        return "Matrix is singular — not invertible"
+                    }
+                    return MatrixEngine.format(inv)
+
                 case .transpose:
                     return MatrixEngine.format(MatrixEngine.transpose(mat))
+
                 case .multiply:
-                    if let res = MatrixEngine.multiply(mat, mat) { return MatrixEngine.format(res) }
-                    return "Multiplication failed"
+                    guard let res = MatrixEngine.multiply(mat, mat) else {
+                        return "Multiplication failed"
+                    }
+                    return MatrixEngine.format(res)
+
                 case .eigenvalues:
-                    if let ev = MatrixEngine.eigenvalues(mat) {
-                        return "λ = " + ev.map { String(format: "%.4f", $0) }.joined(separator: ", ")
+                    guard let ev = MatrixEngine.eigenvalues(mat) else {
+                        return "Could not compute eigenvalues\n(supported for 2×2 – 4×4)"
                     }
-                    return "Could not compute (try 2×2 or 3×3)"
+                    return "λ = " + ev.map { String(format: "%.4g", $0) }.joined(separator: ",  ")
+
                 case .lu:
-                    if let (L, U, _) = MatrixEngine.luDecomposition(mat) {
-                        return "L:\n\(MatrixEngine.format(L))\n\nU:\n\(MatrixEngine.format(U))"
+                    guard let (L, U, _) = MatrixEngine.luDecomposition(mat) else {
+                        return "LU decomposition failed\n(matrix may be singular)"
                     }
-                    return "LU decomposition failed"
+                    return "L:\n\(MatrixEngine.format(L))\n\nU:\n\(MatrixEngine.format(U))"
                 }
             }()
 
@@ -251,7 +290,38 @@ struct MatrixView: View {
         }
     }
 
+    private func copyToClipboard(_ text: String) {
+        // Required UIKit usage: SwiftUI has no programmatic clipboard API
+        #if canImport(UIKit)
+        UIPasteboard.general.string = text
+        #endif
+    }
+
+    // MARK: - Helpers
+
     static func makeEmpty(_ n: Int) -> [[String]] {
         (0..<n).map { _ in Array(repeating: "", count: n) }
+    }
+}
+
+// MARK: - MatrixCell
+
+private struct MatrixCell: View {
+    @Binding var text: String
+    let width: CGFloat
+
+    var body: some View {
+        TextField("0", text: $text)
+            .font(.system(size: 16, weight: .medium, design: .monospaced))
+            .foregroundStyle(Theme.foreground)
+            .multilineTextAlignment(.center)
+            .keyboardType(.numbersAndPunctuation)
+            .frame(width: width, height: 48)
+            .background(Theme.surface2)
+            .clipShape(RoundedRectangle(cornerRadius: Theme.r8, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: Theme.r8, style: .continuous)
+                    .strokeBorder(Theme.border, lineWidth: 0.5)
+            )
     }
 }
